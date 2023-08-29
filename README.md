@@ -10,12 +10,12 @@
     service:'gmail',
     auth:{
         type:'OAuth2',
-        user: 'VSMP Official Account',
-        accessToken: 'paste here'
+        user: 'your gmail account',
+        accessToken: 'paste generated access token here'
       }
     })
 ### Go to this website ``` https://developers.google.com/oauthplayground/ ```
-### Scroll down, then click Gmail API v1
+### Scroll down, then click Gmail API v1, make sure to use the gmail account you provided on the user.
 ### Click the first link that appears, which is the ``` https://mail.google.com/ ```
 ### Click the Authorize APIs button, then click the Exchange Authorization Code for Tokens
 ### In the Request/Response window, go to the "access_token" then copy the provided/generated key then paste it on the accessToken.

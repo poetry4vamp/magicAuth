@@ -2,6 +2,7 @@
 
 ### Open the terminal, and install these packages,
 ``` npm i uuid ```
+
 ``` npm i nodemailer ```
 
 ### For this part in index.js, change the access token with the one provided by the OAuth you generated

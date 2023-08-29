@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>VSMP Official</title>
+
+        <!--Links for CCS, Bootstraps and JS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/navbar.css">
+        <link rel="stylesheet" href="/magnifying.css">
+        <link rel="stylesheet" href="/welcomepage.css">
+        <link rel="stylesheet" href="/homepage.css">
+        <link rel="stylesheet" href="/email.css">
+        <link rel="stylesheet" href="/footer.css">
+    </head>
+    <body>
+    
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">VSMP</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="magnify">Magnifier</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Modes of Screen
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" value="default">Default</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" value="Deuteranomaly">Deuteranomaly</a></li>
+                                <li><a class="dropdown-item" value="Protanomaly">Protanomaly</a></li>
+                                <li><a class="dropdown-item" value="Tritanomaly">Tritanomaly</a></li>
+                                <li><a class="dropdown-item" value="Tritanopia">Tritanopia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Body content-->
+        <section class="home_padding">
+            <div class="container border border-black rounded text-center py-5">
+                <div class="m-3">
+                    <h1 id="homepage_quote">Homepage</h1>
+                    <div>
+                        <!-- Content will be changed kapag nasa katinuan na ko please, as much as possible explanation kung pano gamitin-->
+                        <p class="paragraph_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet facilisis magna etiam tempor orci eu lobortis. Aliquam sem fringilla ut morbi tincidunt. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Pretium fusce id velit ut. Purus in massa tempor nec feugiat nisl. Diam volutpat commodo sed egestas egestas. Laoreet id donec ultrices tincidunt arcu non sodales neque. Augue lacus viverra vitae congue eu consequat ac felis donec. Dictum non consectetur a erat nam at. Ac tortor vitae purus faucibus ornare suspendisse. Tellus orci ac auctor augue mauris. Eu lobortis elementum nibh tellus molestie. Orci dapibus ultrices in iaculis nunc. Aliquam id diam maecenas ultricies mi eget mauris. Neque viverra justo nec ultrices. Praesent tristique magna sit amet. Eget nullam non nisi est sit. Pulvinar elementum integer enim neque volutpat ac. Sagittis orci a scelerisque purus semper eget duis at.
+                            <br>
+                            Turpis in eu mi bibendum neque. Euismod nisi porta lorem mollis aliquam. Posuere lorem ipsum dolor sit amet consectetur. Dictum non consectetur a erat. Amet venenatis urna cursus eget. Fames ac turpis egestas sed tempus urna et pharetra. Velit aliquet sagittis id consectetur. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Est ultricies integer quis auctor elit sed vulputate mi sit. Lacinia at quis risus sed vulputate. Lobortis mattis aliquam faucibus purus in. Eget gravida cum sociis natoque penatibus et magnis dis. Varius vel pharetra vel turpis nunc eget lorem. Ac turpis egestas integer eget aliquet nibh praesent. Pretium quam vulputate dignissim suspendisse in. Convallis a cras semper auctor neque vitae tempus quam pellentesque.
+                        </p>
+                    </div>
+                    <div class="homepage_btn">
+                        <a type="button" class="btn btn-primary mx-5" href="/email">Compose <br> Email</a>
+                        <button type="button" class="btn btn-primary mx-5">Activate Speech <br> Recognition</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Magnifying glass, working na, WAG GAGALAWIN-->
+        <script>
+            const SCALE = 1.3; //magnification
+            const SIZE = 150; // diameter
+            const LENSE_OFFSET_X = SIZE / 10.2;
+            const LENSE_OFFSET_Y = SIZE / 10.2;
+    
+            document.documentElement.style.setProperty("--scale", SCALE);
+            document.documentElement.style.setProperty("--size", SIZE + "px");
+    
+            //create magnifying glass (lense)
+            const handle = document.createElement("div");
+            handle.classList.add("handle");
+    
+            const magnifyingGlass = document.createElement("div");
+            magnifyingGlass.classList.add("magnifying-glass");
+            magnifyingGlass.style.top = LENSE_OFFSET_Y + "px";
+            magnifyingGlass.style.left = LENSE_OFFSET_X + "px";
+    
+            handle.append(magnifyingGlass);
+    
+            const magnifyButton = document.getElementById("magnify");
+    
+            const addMagnifyingGlass = () => {
+            const bodyClone = document.body.cloneNode(true);
+            bodyClone.classList.add("body-clone");
+            bodyClone.style.top = "0px";
+            bodyClone.style.left = "0px";
+            magnifyingGlass.append(bodyClone);
+            document.body.append(handle);
+            };
+    
+            magnifyButton.addEventListener("click", addMagnifyingGlass);
+    
+            const moveMagnifyingGlass = (event) => {
+            let pointerX = event.pageX;
+            let pointerY = event.pageY;
+            //move magnifying glass with cursor
+            handle.style.left = pointerX - SIZE / 1.7 + "px";
+            handle.style.top = pointerY - SIZE / 1.7 + "px";
+            if (magnifyingGlass.children[0]) {
+                //align magnified document
+                let offsetX = (SIZE * Math.pow(SCALE, 2)) / 2 - pointerX * SCALE;
+                let offsetY = (SIZE * Math.pow(SCALE, 2)) / 2 - pointerY * SCALE;
+                magnifyingGlass.children[0].style.left = offsetX + "px";
+                magnifyingGlass.children[0].style.top = offsetY + "px";
+            }
+            };
+    
+            document.addEventListener("pointermove", moveMagnifyingGlass);
+    
+            const removeMagnifiyingGlass = (event) => {
+            magnifyingGlass.children[0].remove();
+            handle.remove();
+            };
+    
+            magnifyingGlass.addEventListener("dblclick", removeMagnifiyingGlass);
+        </script>
+    </body>
+</html>

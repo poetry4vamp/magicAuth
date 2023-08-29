@@ -10,7 +10,7 @@
     service:'gmail',
     auth:{
         type:'OAuth2',
-        user: 'oshisoffline@gmail.com',
+        user: 'VSMP Official Account',
         accessToken: 'paste here'
       }
     })

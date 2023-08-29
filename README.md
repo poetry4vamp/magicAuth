@@ -14,7 +14,7 @@
         accessToken: 'paste generated access token here'
       }
     })
-### Go to this website ``` https://developers.google.com/oauthplayground/ ```
+### To have the generated access token, go to this website ``` https://developers.google.com/oauthplayground/ ```
 ### Scroll down, then click Gmail API v1,
 ### Click the first link that appears, which is the ``` https://mail.google.com/ ```
 ### Click the Authorize APIs button, make sure to use the gmail account you provided on the user, 

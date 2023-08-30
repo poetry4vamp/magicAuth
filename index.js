@@ -1,6 +1,7 @@
 const express = require ('express')
 const nodemailer = require ('nodemailer')
 const uuid = require ('uuid')
+const path = require ('path')
 
 //for the access token part, paste your own access token provided on the OAuth playground
 //also make sure to use the gmail account you used when you accessed the OAuth playground
@@ -28,11 +29,14 @@ const users = [
 
 const app = express()
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(express.json())
 
-app.get('/', (req,res) => {
-    res.sendFile(__dirname + "/index.ejs")
-})
+app.get('/', (req, res) => {
+    res.render('index')
+});
 
 app.post('/login',async (req,res) => {
     const {email} = req.body

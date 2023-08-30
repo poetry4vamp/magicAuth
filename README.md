@@ -4,6 +4,8 @@
 ``` npm i uuid ```
 ###
 ``` npm i nodemailer ```
+###
+``` npm i ejs ```
 
 ### For this part in index.js, change the access token with the one provided by the OAuth you generated
     const transport = nodemailer.createTransport({

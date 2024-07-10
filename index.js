@@ -9,8 +9,8 @@ const transport = nodemailer.createTransport({
     service:'gmail',
     auth:{
         type:'OAuth2',
-        user: 'oshisoffline@gmail.com',
-        accessToken: 'ya29.a0AfB_byBFzODXnBhUmmlOMFfDgttEPWUkJmkqocZdHXv5j8oUhWdCieWwoTrqH7YTxPjq9atGjh9pI4r8BnSbLtpFB-8_A2mR4UzkuWuZfi5POIKI-adxABmC3xp3nIA7qiraMbOEakfrQSPQyCvio5PeRTs3vumCjCIougaCgYKAfsSARISFQHsvYlsrSN99oikc4LHNpci4e7ISQ0173'
+        user: '<gmail>',
+        accessToken: '<generatedtoken>'
     }
 })
 
@@ -18,11 +18,11 @@ const transport = nodemailer.createTransport({
 //you can add your email, just change the id number
 const users = [
     {
-        id:1,email:'allanaubaldo01@gmail.com',magicCode:null
+        id:1,email:'<gmail>',magicCode:null
 
     },
     {
-        id:2,email:'acernliya@gmail.com',magicCode:null
+        id:2,email:'<gmail>',magicCode:null
         
     }
 ]
